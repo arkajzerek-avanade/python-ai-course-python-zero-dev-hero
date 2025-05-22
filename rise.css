@@ -1,0 +1,167 @@
+/* Custom Rise Stylesheet for HD Presentations
+ * This stylesheet overrides Rise defaults to create a responsive
+ * presentation that scales well on HD screens in full-screen mode.
+ */
+
+/* Base font sizing using viewport units */
+.rise-enabled {
+  --base-font-size: 2vmin;
+  font-size: var(--base-font-size);
+}
+
+/* Slide container scaling */
+.rise-enabled .reveal .slides {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+
+/* Slide scaling */
+.rise-enabled .reveal .slide {
+  width: 90% !important;
+  height: 90% !important;
+  padding: 2vmin !important;
+  box-sizing: border-box !important;
+}
+
+/* Header scaling */
+.rise-enabled h1 {
+  font-size: 6vmin !important;
+  margin-bottom: 3vmin !important;
+}
+
+.rise-enabled h2 {
+  font-size: 4.5vmin !important;
+  margin-bottom: 2.5vmin !important;
+}
+
+.rise-enabled h3 {
+  font-size: 3.5vmin !important;
+  margin-bottom: 2vmin !important;
+}
+
+.rise-enabled h4 {
+  font-size: 3vmin !important;
+  margin-bottom: 1.5vmin !important;
+}
+
+/* Text elements */
+.rise-enabled p, .rise-enabled li, .rise-enabled div {
+  font-size: 2.7vmin !important;
+  line-height: 1.4 !important;
+  margin-bottom: 1vmin !important;
+}
+
+/* Code cells */
+.rise-enabled .CodeMirror, .rise-enabled div.output_area pre {
+  font-size: 2vmin !important;
+  line-height: 1.3 !important;
+}
+
+/* Input/output areas */
+.rise-enabled div.input_area {
+  padding: 1.5vmin !important;
+  margin-bottom: 2vmin !important;
+  border-radius: 0.5vmin !important;
+}
+
+.rise-enabled div.output_area {
+  padding: 1vmin !important;
+  margin-bottom: 2vmin !important;
+}
+
+/* Make images scale responsively */
+.rise-enabled img {
+  max-width: 100% !important;
+  max-height: 75vh !important;
+  height: auto !important;
+  margin: 0 auto !important;
+  display: block !important;
+}
+
+/* Table styling */
+.rise-enabled table {
+  font-size: 2vmin !important;
+  margin: 2vmin auto !important;
+  width: auto !important;
+  max-width: 95% !important;
+}
+
+.rise-enabled th, .rise-enabled td {
+  padding: 1vmin 1.5vmin !important;
+}
+
+/* Matplotlib outputs */
+.rise-enabled .output_png {
+  max-width: 95% !important;
+  margin: 0 auto !important;
+}
+
+/* Scrolling for code that's too long */
+.rise-enabled .CodeMirror-scroll {
+  max-height: 60vh !important;
+  overflow-y: auto !important;
+}
+
+/* Better visibility for cell execution counts */
+.rise-enabled div.prompt {
+  font-size: 1.8vmin !important;
+  width: 10vmin !important;
+  min-width: 10vmin !important;
+}
+
+/* Progress indicator */
+.rise-enabled .progress {
+  top: auto !important;
+  bottom: 0 !important;
+  height: 0.5vmin !important;
+}
+
+/* Controls */
+.rise-enabled .controls {
+  bottom: 1.5vmin !important;
+  right: 1.5vmin !important;
+}
+
+.rise-enabled .controls button {
+  font-size: 2vmin !important;
+  padding: 0.5vmin !important;
+}
+
+/* Custom styles for dark/light mode compatibility */
+@media (prefers-color-scheme: dark) {
+  .rise-enabled {
+    color: #f0f0f0 !important;
+    background-color: #222 !important;
+  }
+  
+  .rise-enabled .input_area {
+    background-color: #333 !important;
+  }
+  
+  .rise-enabled .output_area {
+    background-color: #2a2a2a !important;
+  }
+}
+
+/* Full-screen optimization */
+:-webkit-full-screen .reveal .slides {
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+:fullscreen .reveal .slides {
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
