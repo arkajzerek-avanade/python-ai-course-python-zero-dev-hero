@@ -153,7 +153,7 @@ The infrastructure includes:
 1. **Clone the Repository**
     ```bash
     git clone <repository-url>
-    cd <repository-directory>/infra
+    cd <repository-directory>/n8n/infra
     ```
 
 2. **Review and Customize Parameters**
